@@ -52,3 +52,14 @@
 ;; (unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
+
+;; Org-Roam for Zettelkasten
+(package! org-roam
+  :recipe (:host github :repo "org-roam/org-roam" :branch "main"))
+
+;; Org-Cite / Zotero
+(package! citar)
+(package! citar-org-roam)
+
+(package! markdown-mode)
+(package! ox-pandoc)
