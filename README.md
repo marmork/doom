@@ -58,3 +58,15 @@ If `which doom` shows `/home/<username>/.config/emacs/bin/doom` and the output o
   git pull
   doom upgrade
   ```
+
+# 3. Trouble shooting
+
+## 3.1 Doom configuration is not loading
+
+Due to an internal hierarchy, Emacs may not prioritize the Doom configuration. This can be fixed as follows:
+```bash
+mv ~/.emacs ~/.emacs.bak 2>/dev/null
+mv ~/.emacs.d ~/.emacs.d.bak 2>/dev/null
+doom sync
+emacs
+```
