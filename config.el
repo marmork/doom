@@ -75,3 +75,8 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(after! org-roam
+  (setq org-roam-directory (file-truename "~/Dokumente/Schreiben/Zettelkasten/roam"))
+  (setq org-roam-file-extensions '("org" "md"))
+  (org-roam-db-autosync-mode 1))
